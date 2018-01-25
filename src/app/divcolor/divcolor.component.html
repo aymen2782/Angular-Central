@@ -1,0 +1,15 @@
+<hr>
+<p>
+  divcolor works!
+</p>
+<hr>
+
+<div id="couleurDiv" [style.background-color]="color">
+
+  Div Color
+
+</div>
+
+<input type="text" #couleur (change)="changeColor(couleur.value)">
+
+<input type="button" value="Reset" (click)="reset()">
