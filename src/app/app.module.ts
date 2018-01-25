@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -11,6 +11,9 @@ import { BindingComponent } from './binding/binding.component';
 import { DivcolorComponent } from './divcolor/divcolor.component';
 import { TwowayComponent } from './twoway/twoway.component';
 import { CvCardComponent } from './cv-card/cv-card.component';
+import { CvComponent } from './cv/cv.component';
+import { ListCvComponent } from './list-cv/list-cv.component';
+import { CvItemComponent } from './cv-item/cv-item.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CvCardComponent } from './cv-card/cv-card.component';
     BindingComponent,
     DivcolorComponent,
     TwowayComponent,
-    CvCardComponent
+    CvCardComponent,
+    CvComponent,
+    ListCvComponent,
+    CvItemComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,7 @@ import { CvCardComponent } from './cv-card/cv-card.component';
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

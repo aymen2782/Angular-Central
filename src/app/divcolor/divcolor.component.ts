@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {componentFactoryName} from "@angular/compiler";
 
 @Component({
   selector: 'app-divcolor',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DivcolorComponent implements OnInit {
 
+  compteur : number;
   private color: string;
   private defaultColor: string;
   constructor() {
@@ -15,6 +17,7 @@ export class DivcolorComponent implements OnInit {
   ngOnInit() {
     this.defaultColor = 'blue';
     this.color = this.defaultColor;
+    this.compteur = 0;
   }
   changeColor(couleur) {
     console.log(couleur);
@@ -22,6 +25,10 @@ export class DivcolorComponent implements OnInit {
   }
   reset() {
    this.color = this.defaultColor;
+  }
+
+  traiterFils(event){
+    this.compteur+=event.increment;
   }
 
 }

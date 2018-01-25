@@ -8,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class CvCardComponent implements OnInit {
 
   name: string;
+  firstname: string;
+  job: string;
+  image: string;
   constructor() { }
 
   ngOnInit() {
-    this.name = "Aymen";
+    this.name = "Sellaouti";
+    this.firstname = "Aymen";
+    this.job = "Computer Science Associate Professor";
+    this.image= "rotating_card_profile2.png";
   }
 
 }

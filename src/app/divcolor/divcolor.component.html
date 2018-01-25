@@ -6,10 +6,15 @@
 
 <div id="couleurDiv" [style.background-color]="color">
 
-  Div Color
+  Div Color <br>
+  {{compteur}}
 
 </div>
 
 <input type="text" #couleur (change)="changeColor(couleur.value)">
 
 <input type="button" value="Reset" (click)="reset()">
+
+<hr>
+
+<app-compo1 (dataSent)="traiterFils($event)" [pereColor]="color"></app-compo1>
