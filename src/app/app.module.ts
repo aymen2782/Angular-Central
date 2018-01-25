@@ -10,6 +10,7 @@ import { InterpolationComponent } from './interpolation/interpolation.component'
 import { BindingComponent } from './binding/binding.component';
 import { DivcolorComponent } from './divcolor/divcolor.component';
 import { TwowayComponent } from './twoway/twoway.component';
+import { CvCardComponent } from './cv-card/cv-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TwowayComponent } from './twoway/twoway.component';
     InterpolationComponent,
     BindingComponent,
     DivcolorComponent,
-    TwowayComponent
+    TwowayComponent,
+    CvCardComponent
   ],
   imports: [
     BrowserModule,
