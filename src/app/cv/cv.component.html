@@ -1,8 +1,8 @@
 <div class="col-md-12">
   <div class="col-md-5">
-    <app-list-cv></app-list-cv>
+    <app-list-cv (sendSelectedPersonne)="showPersonne($event)" [personnes]="personnes"></app-list-cv>
   </div>
   <div class="col-md-7">
-    <app-cv-card></app-cv-card>
+    <app-cv-card [personne]="selectedPersonne"></app-cv-card>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Personne} from "../Model/Personne";
 
 @Component({
   selector: 'app-cv',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CvComponent implements OnInit {
 
+  selectedPersonne : Personne;
   personnes : Personne[];
   constructor() { }
 
@@ -15,6 +17,11 @@ export class CvComponent implements OnInit {
       new Personne('sellaouti','aymen','as.jpg','Teacher'),
       new Personne('sellaouti2','aymen2','as.jpg','Teacher2')
       ]
+  }
+  showPersonne(event){
+    console.log('in showPersonne');
+    console.log('Personne : ',event.selectedPersonne);
+    this.selectedPersonne = event.selectedPersonne;
   }
 
 }

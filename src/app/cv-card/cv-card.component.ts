@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Personne} from "../Model/Personne";
 
 @Component({
   selector: 'app-cv-card',
@@ -7,17 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CvCardComponent implements OnInit {
 
-  name: string;
-  firstname: string;
-  job: string;
-  image: string;
+  @Input() personne: Personne;
   constructor() { }
 
   ngOnInit() {
-    this.name = "Sellaouti";
-    this.firstname = "Aymen";
-    this.job = "Computer Science Associate Professor";
-    this.image= "rotating_card_profile2.png";
+
   }
 
 }

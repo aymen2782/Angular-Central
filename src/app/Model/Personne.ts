@@ -1,4 +1,4 @@
-class Personne{
+export class Personne{
   nom: string;
   prenom: string;
   image: string;
