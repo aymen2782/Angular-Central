@@ -1,0 +1,7 @@
+<div *ngIf="showMe" [ngClass]="{ allumer: allume, eteindre: eteint} ">
+  Ampoule
+</div>
+
+<button (click)="change()">Allumer/Eteindre</button>
+<button (click)="show()">Afficher/Cacher</button>
+
