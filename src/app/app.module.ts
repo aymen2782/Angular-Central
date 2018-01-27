@@ -16,6 +16,8 @@ import { ListCvComponent } from './list-cv/list-cv.component';
 import { CvItemComponent } from './cv-item/cv-item.component';
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
+import { TodoComponent } from './todo/todo.component';
+import {TodoService} from "./todo.service";
 
 @NgModule({
   declarations: [
@@ -31,14 +33,15 @@ import { NgclassComponent } from './ngclass/ngclass.component';
     ListCvComponent,
     CvItemComponent,
     NgstyleComponent,
-    NgclassComponent
+    NgclassComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent],
   schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })
