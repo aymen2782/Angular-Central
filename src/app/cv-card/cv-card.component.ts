@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Personne} from "../Model/Personne";
+import {EmbaucheService} from "../embauche.service";
 
 @Component({
   selector: 'app-cv-card',
@@ -9,10 +10,15 @@ import {Personne} from "../Model/Personne";
 export class CvCardComponent implements OnInit {
 
   @Input() personne: Personne;
-  constructor() { }
+  constructor(private embaucheService:EmbaucheService) { }
 
   ngOnInit() {
 
+  }
+
+  embaucher(personne : Personne){
+    console.log('in cv card embaucher');
+    this.embaucheService.embaucher(personne);
   }
 
 }

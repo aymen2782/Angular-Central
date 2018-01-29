@@ -18,6 +18,10 @@ import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { TodoComponent } from './todo/todo.component';
 import {TodoService} from "./todo.service";
+import { EmbaucheComponent } from './embauche/embauche.component';
+import {EmbaucheService} from "./embauche.service";
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import {PersonneService} from "./personne.service";
 
 @NgModule({
   declarations: [
@@ -34,14 +38,16 @@ import {TodoService} from "./todo.service";
     CvItemComponent,
     NgstyleComponent,
     NgclassComponent,
-    TodoComponent
+    TodoComponent,
+    EmbaucheComponent,
+    FormulaireComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [TodoService],
+  providers: [TodoService, EmbaucheService, PersonneService],
   bootstrap: [AppComponent],
   schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })

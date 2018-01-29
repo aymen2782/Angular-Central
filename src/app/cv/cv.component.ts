@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Personne} from "../Model/Personne";
+import {PersonneService} from "../personne.service";
 
 @Component({
   selector: 'app-cv',
@@ -8,22 +9,25 @@ import {Personne} from "../Model/Personne";
 })
 export class CvComponent implements OnInit {
 
+  showForm: Boolean;
   selectedPersonne : Personne;
   personnes : Personne[];
-  constructor() { }
+  constructor(private personneService:PersonneService) { }
 
   ngOnInit() {
-    this.personnes =[
-      new Personne('sellaouti','aymen','as.jpg','Teacher'),
-      new Personne('sellaouti2','aymen2','as.jpg','Teacher2'),
-      new Personne('sellaouti3','aymen3','as.jpg','Teacher3'),
-      new Personne('sellaouti4','aymen4','as.jpg','Teacher4')
-      ]
+
+    this.personnes = this.personneService.getPersonnes();
+    this.showForm = false;
+
   }
   showPersonne(event){
     console.log('in showPersonne');
     console.log('Personne : ',event.selectedPersonne);
     this.selectedPersonne = event.selectedPersonne;
+  }
+
+  afficherFormulaire(){
+    this.showForm = true;
   }
 
 }

@@ -1,0 +1,13 @@
+<h1>
+  formulaire
+</h1>
+<hr>
+
+<form #monformulaire="ngForm" (ngSubmit)="enregistrer(monformulaire)">
+  <label for="nom">Nom</label><input required id="nom" type="text" name="nom" ngModel class="form-control">
+  <label for="prenom">Prenom</label>  <input required id="prenom" type="text" name="prenom" ngModel class="form-control">
+  <label for="job">Job</label><input required id="job" type="text" name="job" ngModel class="form-control">
+  <label for="image">Image</label><input required id="image" type="text" name="image" ngModel class="form-control">
+
+  <input [disabled]="!monformulaire.valid" type="submit" class="btn btn-default">
+</form>
