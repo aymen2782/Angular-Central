@@ -22,6 +22,7 @@ import { EmbaucheComponent } from './embauche/embauche.component';
 import {EmbaucheService} from "./embauche.service";
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import {PersonneService} from "./personne.service";
+import { HttptestComponent } from './httptest/httptest.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {PersonneService} from "./personne.service";
     NgclassComponent,
     TodoComponent,
     EmbaucheComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    HttptestComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<hr>
+
+<p>
+  httptest works!
+</p>
+<ol>
+  <li *ngFor="let post of posts">
+    {{post.title}} {{post.body}}
+  </li>
+</ol>
+<hr>
+
+<button (click)="testPostApi()" class="btn-danger btn-danger">Get Data</button>
